@@ -94,9 +94,50 @@ class pattern {
         }
     }
 
+    static void p8(int n){
+        for(int i=0; i<n; i++){
+            int c=1;
+            int d=i+1;
+            for(int j=0; j<i+1; j++){
+                System.out.print(c);
+                c++;
+            }
+            for(int k=0; k<(2*n)-(2*(i+1)); k++){
+                System.out.print(' ');
+            }
+            for(int l=0; l<i+1; l++){
+                System.out.print(d);
+                d--;
+            }
+            System.out.println();
+        }
+    }
+
+    static void p9(int n){
+        int c=1;
+        for(int i=0; i<n; i++){
+            for(int j=0; j<i+1; j++){
+                System.out.print(c);
+                c++;
+            }
+            System.out.println();
+        }
+    }
+
+    static void p10(int n){
+        for(int i=0; i<n; i++){
+            char c = 'A';
+            for(int j=0; j<i+1; j++){
+                System.out.print(c);
+                c++;
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        p7(n);
+        p10(n);
     }
 }
