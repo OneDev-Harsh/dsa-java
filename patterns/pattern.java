@@ -60,10 +60,43 @@ class pattern {
         }
     }
 
+    static void p6(int n){
+        for(int i=0; i<(2*n)-1; i++){
+            if(i<n){
+                for(int j=0; j<i+1; j++){
+                    System.out.print('*');
+                }
+            }
+            else {
+                for(int k=0;k<(2*n)-i-1; k++){
+                    System.out.print('*');
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    static void p7(int n){
+        for(int i=0; i<n; i++){
+            int c = i%2==1?1:0;
+            for(int j=0; j<i; j++){
+                if(c==1){
+                    System.out.print(c);
+                    c=0;
+                    continue;
+                }
+                if(c==0){
+                    System.out.print(c);
+                    c=1;
+                }
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        p4(n);
-        p5(n);
+        p7(n);
     }
 }
