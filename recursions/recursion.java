@@ -32,14 +32,14 @@ class recursion {
         return n*factOfN(n-1);
     }
 
-    static void revArr(int f, int l, int a[]){
-        if(f>=l){
+    static void revArr(int f, int a[]){
+        if(f>=a.length-1-f){
             return;
         }
         int t = a[f];
-        a[f] = a[l];
-        a[l] = t;
-        revArr(f+1,l-1,a);
+        a[f] = a[a.length-1-f];
+        a[a.length-1-f] = t;
+        revArr(f+1,a);
     }
     
     static void printArr(int a[]){
@@ -48,14 +48,24 @@ class recursion {
         }
     }
 
+    static boolean isStringPalindrome(int i, String s){
+        if(i>=s.length()/2) return true;
+        if(s.charAt(i) != s.charAt(s.length()-i-1)){
+            return false;
+        }
+        return isStringPalindrome(i+1, s);
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //int n = sc.nextInt();
         //oneToN(n, n);
         //nToOne(1, n);
-        int a[] = {3,4,1,2,5,9,7};
+        int a[] = {8,1,0,1,3,9,3,5,1,6};
         //System.out.println(factOfN(n));
-        revArr(0,a.length-1,a);
-        printArr(a);
+        //revArr(0,a);
+        //printArr(a);
+        String s = sc.nextLine().toLowerCase();
+        System.out.println(isStringPalindrome(0, s));
     }
 }
