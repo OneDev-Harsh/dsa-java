@@ -5,12 +5,12 @@ class prime {
         int n = sc.nextInt();
 
         int x=0;
-        for(int i=1; i<=n; i++){
+        for(int i=1; i*i<=n; i++){
             if(n%i==0){
                 x++;
             }
         }
-        if(x==2){
+        if(x==1){
             System.out.println("It is a prime no.");
         }
         else {
