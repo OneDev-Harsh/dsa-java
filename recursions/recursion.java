@@ -56,16 +56,24 @@ class recursion {
         return isStringPalindrome(i+1, s);
     }
 
+    static int nthFibonacci(int n){
+        if(n<=1){
+            return n;
+        }
+        return nthFibonacci(n-1)+nthFibonacci(n-2);
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //int n = sc.nextInt();
+        int n = sc.nextInt();
         //oneToN(n, n);
         //nToOne(1, n);
         int a[] = {8,1,0,1,3,9,3,5,1,6};
         //System.out.println(factOfN(n));
         //revArr(0,a);
         //printArr(a);
-        String s = sc.nextLine().toLowerCase();
-        System.out.println(isStringPalindrome(0, s));
+        //String s = sc.nextLine().toLowerCase();
+        //System.out.println(isStringPalindrome(0, s));
+        System.out.println(nthFibonacci(n));
     }
 }
