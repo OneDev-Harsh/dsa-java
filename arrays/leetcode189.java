@@ -15,7 +15,7 @@ class leetcode189 {
     }
 
     public static void main(String[] args) {
-        int a[] = {1,2,3,4,5,6,7};
+        int a[] = {1,2,3,4,5,6,7,8,9};
         int k = 3;
         reverse(a, 0, k-1);
         reverse(a, k, a.length-1);
