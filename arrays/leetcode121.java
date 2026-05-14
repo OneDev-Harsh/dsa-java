@@ -22,7 +22,7 @@ class leetcode121{
     }
 
     public static void main(String[] args) {
-        int a[] = {7,6,4,3,1};
+        int a[] = {7,6,4,3,1,2,8};
         System.out.println(optimal(a));
     }
 }
