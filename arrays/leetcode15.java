@@ -27,8 +27,6 @@ class leetcode15 {
         List<List<Integer>> list = new ArrayList<>();
 
         for (int i = 0; i < nums.length - 2; i++) {
-
-            // skip duplicate first elements
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
@@ -46,13 +44,9 @@ class leetcode15 {
 
                     j++;
                     k--;
-
-                    // skip duplicate second elements
                     while (j < k && nums[j] == nums[j - 1]) {
                         j++;
                     }
-
-                    // skip duplicate third elements
                     while (j < k && nums[k] == nums[k + 1]) {
                         k--;
                     }
